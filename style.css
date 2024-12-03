@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Poppins&display=swap');
+#hiddenInput{
+    display: none;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Noto Sans", sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-image: url(pics/bg.png);
+    background-size: cover;
+    background-position: right; 
+  }
+  p{
+    color: white;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  #main {
+    overflow: scroll;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    max-width: 90%;
+  }
+
+  #main {
+    max-height: 400px; /* Adjust the height for scrolling */
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: rgba(59, 57, 57, 0.7);  }
+
+  #main {
+    scrollbar-width: thin; /* Makes the scrollbar thin */
+    scrollbar-color: #404040 #f1f1f1; /* Thumb color, track color */
+  }
+  
+  
+  /* Form Styles */
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  form input[type="text"] {
+    width: 75%;
+    padding: 12px 15px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  form input[type="text"]:focus {
+    border-color: #000000;
+  }
+  
+  form input[type="submit"] {
+    background: #7b7b7b;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  form input[type="submit"]:hover {
+    background: #427558;
+  }
+  
+  /* To-do List Container */
+  #box {
+    margin-top: 10px;
+  }
+  
+  .todo-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background: #fafafa;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .todo-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .todo-text {
+    font-size: 1rem;
+    margin: 0;
+    flex-grow: 1;
+  }
+  
+  .todo-text.completed {
+    text-decoration: line-through;
+    color: #aaa;
+  }
+  
+  /* Hidden Input for Updates */
+  .hidden-input {
+    display: none;
+    width: 70%;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+  /* Buttons */
+  .todo-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  button {
+    background-color: #e0e0e0;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 10px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #d0d0d0;
+  }
+  
+  button.done {
+    background-color: #00c853;
+    color: white;
+  }
+  
+  button.done:hover {
+    background-color: #00a045;
+  }
+  
+  button.delete {
+    background-color: #f44336;
+    color: white;
+  }
+  
+  button.delete:hover {
+    background-color: #d32f2f;
+  }
+  
+  button.update {
+    background-color: #ffc107;
+    color: white;
+  }
+  
+  button.update:hover {
+    background-color: #ffb300;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    #main {
+      width: 90%;
+    }
+  
+    form input[type="text"] {
+      width: 65%;
+    }
+  
+    form input[type="submit"] {
+      padding: 10px;
+    }
+  
+    .todo-buttons {
+      flex-direction: column;
+      gap: 5px;
+    }
+  
+    .todo-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
