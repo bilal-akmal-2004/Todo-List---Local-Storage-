@@ -1,5 +1,4 @@
-let data = [];
-localStorage.setItem("List Items", JSON.stringify(data));
+loadingData();
 function addMe(e) {
   e.preventDefault();
   let inp = document.getElementById("input");
@@ -42,7 +41,6 @@ function savingUpdatedData(id, value) {
   let dataFromLocalStorage = JSON.parse(localStorage.getItem("List Items"));
   dataFromLocalStorage[id] = { ...dataFromLocalStorage[id], list: value };
   localStorage.setItem("List Items", JSON.stringify(dataFromLocalStorage));
-  loadingData();
 }
 
 function updateList(e, i) {
@@ -52,14 +50,21 @@ function updateList(e, i) {
       e.target.previousElementSibling.previousElementSibling.value
     );
     e.target.innerText = "Update";
-    loadingData();
+    e.target.previousElementSibling.style.display = "block";
+    e.target.previousElementSibling.style.display = "block";
+    e.target.nextElementSibling.style.display = "block";
     return;
   }
+  let noteText =
+    e.target.previousElementSibling.previousElementSibling
+      .previousElementSibling.innerText;
   e.target.previousElementSibling.previousElementSibling.style.display =
     "block";
+  e.target.previousElementSibling.previousElementSibling.value = `${noteText}`;
   e.target.previousElementSibling.style.display = "none";
   e.target.previousElementSibling.style.display = "none";
   e.target.nextElementSibling.style.display = "none";
+  console.log(e.target.previousElementSibling.previousElementSibling);
   e.target.innerText = "Save";
 }
 

@@ -19,7 +19,7 @@ body{
     background-position: right; 
   }
   p{
-    color: white;
+    color: rgb(255, 255, 255);
   }
   
   h1 {
@@ -92,6 +92,11 @@ body{
   /* To-do List Container */
   #box {
     margin-top: 10px;
+    display: flex
+;
+    flex-direction: column;
+    width: 170px;
+    gap: 10px;
   }
   
   .todo-item {
